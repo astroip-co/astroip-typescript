@@ -12,6 +12,9 @@
                 "<node_internals>/**"
             ],
             "program": "${file}",
+            "cwd": "${workspaceRoot}",
+            "runtimeArgs": ["-r", "ts-node/register"],
+            "args": ["${workspaceRoot}/samples/sample-iplookup.ts"],
             "preLaunchTask": "tsc: build - tsconfig.json",
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
