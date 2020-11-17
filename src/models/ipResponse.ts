@@ -1,21 +1,21 @@
 export interface IpResponse {
  
-    "status-code": number,
+    "status_code": number,
     "geo": {
-        "is-metric": boolean,
-        "is-in-europe": boolean,
+        "is_metric": boolean,
+        "is_eu": boolean,
         "longitude": number,
         "latitude": number,
-        "country-geo-id": number,
-        "zip-code": string,
+        "country_geo_id": number,
+        "zip_code": string,
         "city": string,
-        "region-code": string,
-        "region-name":string,
-        "continent-code": string,
-        "continent-name": string,
+        "region_code": string,
+        "region_name":string,
+        "continent_code": string,
+        "continent_name": string,
         "capital": string,
-        "country-name": string,
-        "country-iso-code": string
+        "country_name": string,
+        "country_code": string
     },
     "asn": {
         "route": string,
@@ -26,46 +26,46 @@ export interface IpResponse {
         "asn": string
     },
     "currency": {
-        "native-name": string,
+        "native_name": string,
         "code": string,
         "name": string,
         "symbol": string
     },
     "timezone": {
-        "is-daylight-saving": boolean,
-        "gmt-offset": number,
-        "date-time": string,
-        "microsoft-name": string,
-        "iana-name": string
+        "is_daylight_saving": boolean,
+        "gmt_offset": number,
+        "date_time": string,
+        "microsoft_name": string,
+        "iana_name": string
     },
     "security": {
-        "is-crawler": boolean,
-        "is-proxy": boolean,
-        "is-tor": boolean,
-        "tor-insights":  {
-            "exit-node": string,
-            "published-on": string,
-            "last-status-on": string
+        "is_crawler": boolean,
+        "is_proxy": boolean,
+        "is_tor": boolean,
+        "tor_insights":  {
+            "exit_node": string,
+            "published_on": string,
+            "last_status_on": string
         },
-        "proxy-insights": {
+        "proxy_insights": {
             "type": string
         },
-        "crawler-insights": {
+        "crawler_insights": {
             "type": string,
             "name": string,
             "domain": string
         }
     },
     "crypto": {
-        "is-crypto-node": boolean,
-        "crypto-insights": {
+        "is_crypto": boolean,
+        "crypto_insights": {
             "port": number,
             "coin": string
         }
     },
     "error": string,
     "hostname": string,
-    "ip-type": string,
-    "requester-ip": string,
+    "ip_type": string,
+    "requester_ip": string,
     "ip": string
 }
