@@ -1,6 +1,6 @@
 import { AstroIPCache, DummyCache } from './cache';
 import { ApiHandler } from './apiHandler';
-import {IpResponse} from './models/ipResponse';
+import { IpResponse } from './models/ipResponse';
 
 export class AstroIP {
 
@@ -14,7 +14,7 @@ export class AstroIP {
         this.apiKey = apiKey;
 
         this.cache = new DummyCache();
-        
+
         if (cache) {
             this.cache = cache;
         }
@@ -22,12 +22,12 @@ export class AstroIP {
         this.apiHandler = new ApiHandler(apiKey);
     }
 
-    
-    public async lookupIP(ipAddress?: string, hostname?: boolean, userAgent?: boolean) : Promise<IpResponse> {
+
+    public async lookupIP(ipAddress?: string, hostname?: boolean, userAgent?: boolean): Promise<IpResponse> {
         const cacheKey = this.buildCacheKey(ipAddress, hostname, userAgent);
         const cacheValue = this.cache.get(cacheKey) as IpResponse;
 
-        let response: IpResponse;         
+        let response: IpResponse;
 
         if (!cacheValue) {
             response = await this.apiHandler.lookupIP(ipAddress, hostname, userAgent);
@@ -39,16 +39,16 @@ export class AstroIP {
         return response;
     }
 
-    private buildCacheKey(ipAddress?: string, hostname?: boolean, userAgent?: boolean) : string {
+    private buildCacheKey(ipAddress?: string, hostname?: boolean, userAgent?: boolean): string {
 
         let key = ipAddress ? ipAddress : this.DEF_IP;
 
         if (hostname) {
-            key += "_hostname"; 
+            key += "_hostname";
         }
 
         if (userAgent) {
-            key += "_useragent"; 
+            key += "_useragent";
         }
 
         return key;

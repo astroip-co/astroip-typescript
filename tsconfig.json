@@ -23,7 +23,8 @@
       "noFallthroughCasesInSwitch": true
     },
     "include": [
-      "src/**/*.ts"
+      "src/**/*.ts",
+      "samples/**/*.ts"
     ],
     "exclude": [
       "node_modules",

@@ -1,4 +1,5 @@
 import isIP from 'is-ip';
+import fetch from 'node-fetch';
 
 export class ApiHandler {
 
@@ -26,11 +27,7 @@ export class ApiHandler {
         }
 
         const response = await fetch(reqUrl);
-      
-        if (!response.ok) {
-          throw new Error(`An error has occured: ${response.status}`);
-        }
-      
+       
         return await response.json();
     }
 }

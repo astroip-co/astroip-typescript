@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${file}",
+            "program": "${workspaceRoot}/samples/sample-iplookup.ts",
             "cwd": "${workspaceRoot}",
             "runtimeArgs": ["-r", "ts-node/register"],
             "args": ["${workspaceRoot}/samples/sample-iplookup.ts"],
