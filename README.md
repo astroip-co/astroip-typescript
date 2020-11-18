@@ -19,7 +19,7 @@ This is the official Javascript Library for AstroIP.co, which allows a fast look
 In order to use AstroIP.co API, you will need to register a free account at https://astroip.co and get an API KEY. All data fields are always enabled regardless of the subscription tier.
 
 The Free tier will allow up to 30,000 requests a month.
-The PRO tier will allow for up to 3 Mil requests a month.
+The Business tier will allow for up to 3 Mil requests a month.
 More pricing info are available at: https://astroip.co/#pricing-section
 
 ## Installation
