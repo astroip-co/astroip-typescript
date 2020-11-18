@@ -1,5 +1,5 @@
 
-#AstroIP.co Official Typescript library
+# AstroIP.co Official Typescript library
 
 This is the official Javascript Library for AstroIP.co, which allows a fast lookup of any IP address or ASN. Our main features are:
 
@@ -17,13 +17,13 @@ The Free tier will allow up to 30,000 requests a month.
 The PRO tier will allow for up to 3 Mil requests a month.
 More pricing info are available at: https://astroip.co/#pricing-section
 
-##Installation
+## Installation
 Npm
     $ npm i astroip-typescript
 Yarn
     $ yarn add astroip-typescript
 
-##Usage example
+## Usage example
 IP Lookup:
 
   const {AstroIP} = require("astroip-typescript")
