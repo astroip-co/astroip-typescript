@@ -1,0 +1,50 @@
+{
+  "name": "astroip-typescript",
+  "version": "1.0.1",
+  "description": "Official Typescript / Javascript SDK for AstroIP.co Geolocation API",
+  "main": "index.js",
+  "dependencies": {
+    "is-ip": "^3.1.0",
+    "lru-cache": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astroip-co/astroip-typescript.git"
+  },
+  "keywords": [
+    "geolocation",
+    "API",
+    "maxmind",
+    "ip2location",
+    "ipdata",
+    "asn",
+    "lookup",
+    "ipinfo",
+    "ipinfodb",
+    "ipthreat",
+    "ipv4",
+    "ipv6",
+    "ip",
+    "country",
+    "currency",
+    "timezone",
+    "useragent",
+    "ipaddress",
+    "es7",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "astroip-co",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astroip-co/astroip-typescript/issues"
+  },
+  "homepage": "https://github.com/astroip-co/astroip-typescript#readme"
+}

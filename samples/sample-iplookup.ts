@@ -10,7 +10,7 @@ async function main() {
     let ipInfo = await client.lookupIP('8.8.8.8', hostname, userAgent);
 
     if (ipInfo.error == null) {
-        console.log(ipInfo.geo["country-name"]);
+        console.log(ipInfo.geo["country_name"]);
     } else {
         console.log(ipInfo.error);
     }
