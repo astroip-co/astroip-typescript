@@ -32,7 +32,7 @@ export interface IpResponse {
         symbol: string
     },
     timezone: {
-        is_daylight_saving: boolean,
+        is_dst: boolean,
         gmt_offset: number,
         date_time: string,
         microsoft_name: string,
