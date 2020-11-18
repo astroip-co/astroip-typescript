@@ -23,9 +23,9 @@ Npm
    $ npm i astroip-typescript
    ```
 Yarn
-     ```
+   ```
     $ yarn add astroip-typescript
-     ```
+   ```
 
 ## Usage example
 IP Lookup:
