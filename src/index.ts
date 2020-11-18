@@ -13,11 +13,7 @@ export class AstroIP {
 
         this.apiKey = apiKey;
 
-        this.cache = new DummyCache();
-
-        if (cache) {
-            this.cache = cache;
-        }
+        this.cache = cache ? cache : new DummyCache();
 
         this.apiHandler = new ApiHandler(apiKey);
     }
