@@ -1,6 +1,6 @@
 {
   "name": "astroip-typescript",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Official Typescript / Javascript SDK for AstroIP.co Geolocation API",
   "main": "index.js",
   "dependencies": {
