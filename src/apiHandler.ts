@@ -30,5 +30,14 @@ export class ApiHandler {
        
         return await response.json();
     }
+
+    async lookupASN(asnName?: string) {        
+
+        let reqUrl = this.baseUrl + "/asn/" + asnName + "/?api_key=" + this.apiKey;
+
+        const response = await fetch(reqUrl);
+       
+        return await response.json();
+    }
 }
 

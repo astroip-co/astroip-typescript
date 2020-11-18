@@ -50,6 +50,6 @@ ASN Lookup:
   
   let testApiKey = '1725E47C-1486-4369-AAFF-463CC9764026';
   const client = new AstroIP(testApiKey);
-  let asnInfo = await client.requestAsnData("AS15169");
+  let asnInfo = await client.lookupASN("AS15169");
   console.log(asnInfo);
  ```

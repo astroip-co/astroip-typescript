@@ -1,6 +1,7 @@
 import { AstroIPCache, DummyCache } from './cache';
 import { ApiHandler } from './apiHandler';
 import { IpResponse } from './models/ipResponse';
+import { AsnResponse } from './models/asnResponse';
 
 export class AstroIP {
 
@@ -27,6 +28,22 @@ export class AstroIP {
 
         if (!cacheValue) {
             response = await this.apiHandler.lookupIP(ipAddress, hostname, userAgent);
+            this.cache.put(cacheKey, response);
+        } else {
+            response = this.cache.get(cacheKey);
+        }
+
+        return response;
+    }
+
+    public async lookupASN(asnName?: string): Promise<AsnResponse> {
+        const cacheKey = this.buildCacheKey(asnName);
+        const cacheValue = this.cache.get(cacheKey) as AsnResponse;
+
+        let response: AsnResponse;
+
+        if (!cacheValue) {
+            response = await this.apiHandler.lookupASN(asnName);
             this.cache.put(cacheKey, response);
         } else {
             response = this.cache.get(cacheKey);
