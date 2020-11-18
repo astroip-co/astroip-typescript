@@ -19,13 +19,17 @@ More pricing info are available at: https://astroip.co/#pricing-section
 
 ## Installation
 Npm
-    $ npm i astroip-typescript
+   ```
+   $ npm i astroip-typescript
+   ```
 Yarn
+     ```
     $ yarn add astroip-typescript
+     ```
 
 ## Usage example
 IP Lookup:
-
+ ```
   const {AstroIP} = require("astroip-typescript")
  
   let testApiKey = '1725E47C-1486-4369-AAFF-463CC9764026';
@@ -34,13 +38,13 @@ IP Lookup:
   let userAgent = true;
   let ipInfo = await client.lookupIP('8.8.8.8', hostname, userAgent);
   console.log(ipInfo);
-
+ ```
 ASN Lookup:
-
+ ```
   const {AstroIP} = require("astroip-typescript")
   
   let testApiKey = '1725E47C-1486-4369-AAFF-463CC9764026';
   const client = new AstroIP(testApiKey);
   let asnInfo = await client.requestAsnData("AS15169");
   console.log(asnInfo);
-
+ ```
